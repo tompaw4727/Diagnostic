@@ -1,0 +1,28 @@
+
+DELETE http://localhost:8080/receptionist/visits/delete/17
+###
+PUT http://localhost:8080/receptionist/visits/edit/3?visitDate=2022-01-14&tour=I
+
+###
+POST http://localhost:8080/receptionist/visits/add/new/visit
+Content-Type: application/json;
+
+{
+  "id": null,
+  "testId": null ,
+  "labId": 1,
+  "patientEmail": "1",
+  "visitDate": "2022-01-24" ,
+  "tour": "VII" ,
+  "visitStatus": null ,
+  "resultsStatus": null
+}
+
+###
+PUT http://localhost:8080/labs/edit/status/1?labStatus=non_operational
+
+###
+PUT http://localhost:8080/receptionist/visits/technic/edit/visit_status/1?visitStatus=completed
+
+###
+PUT http://localhost:8080/receptionist/visits/technic/edit/visit_result_status/1?resultStatus=available
